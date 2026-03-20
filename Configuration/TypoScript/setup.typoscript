@@ -1,0 +1,55 @@
+plugin.tx_gallery {
+    view {
+        templateRootPaths {
+            0 = EXT:gallery/Resources/Private/Templates/
+            10 = {$plugin.tx_gallery.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:gallery/Resources/Private/Partials/
+            10 = {$plugin.tx_gallery.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:gallery/Resources/Private/Layouts/
+            10 = {$plugin.tx_gallery.view.layoutRootPath}
+        }
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_gallery.persistence.storagePid}
+        recursive = 0
+    }
+
+    settings {
+        # Items per page in gallery list
+        itemsPerPage = 12
+
+        # Enable lightbox
+        enableLightbox = 1
+
+        # Lightbox library (glightbox or fancybox)
+        lightboxLibrary = glightbox
+
+        # Thumbnail width for gallery overview
+        thumbnailWidth = 400
+
+        # Thumbnail height for gallery overview
+        thumbnailHeight = 300
+
+        # Detail image max width
+        detailImageMaxWidth = 1200
+
+        # Detail image max height
+        detailImageMaxHeight = 900
+
+        # Show photographer metadata
+        showPhotographer = 1
+
+        # Show license metadata
+        showLicense = 1
+    }
+}
+
+# Page configuration for gallery detail pages
+[traverse(request.getQueryParams(), 'tx_gallery_gallerylist/gallery') > 0]
+    page.title.override.field = title
+[END]

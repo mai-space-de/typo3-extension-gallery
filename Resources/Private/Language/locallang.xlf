@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages" date="2024-01-01T00:00:00Z" product-name="gallery">
+        <header/>
+        <body>
+            <trans-unit id="plugin.gallery_gallerylist.title">
+                <source>Gallery: Overview &amp; Detail</source>
+            </trans-unit>
+            <trans-unit id="plugin.gallery_galleryarchive.title">
+                <source>Gallery: Year Archive</source>
+            </trans-unit>
+            <trans-unit id="plugin.gallery_galleryretrospective.title">
+                <source>Gallery: Retrospective</source>
+            </trans-unit>
+            <trans-unit id="list.heading">
+                <source>Gallery</source>
+            </trans-unit>
+            <trans-unit id="list.filter.year">
+                <source>Filter by year</source>
+            </trans-unit>
+            <trans-unit id="list.filter.category">
+                <source>Filter by category</source>
+            </trans-unit>
+            <trans-unit id="list.filter.all">
+                <source>All</source>
+            </trans-unit>
+            <trans-unit id="list.filter.apply">
+                <source>Apply Filter</source>
+            </trans-unit>
+            <trans-unit id="list.empty">
+                <source>No galleries found.</source>
+            </trans-unit>
+            <trans-unit id="list.images.count">
+                <source>images</source>
+            </trans-unit>
+            <trans-unit id="show.back">
+                <source>Back to Gallery</source>
+            </trans-unit>
+            <trans-unit id="show.photographer">
+                <source>Photographer</source>
+            </trans-unit>
+            <trans-unit id="show.license">
+                <source>License</source>
+            </trans-unit>
+            <trans-unit id="archive.heading">
+                <source>Year Archive</source>
+            </trans-unit>
+            <trans-unit id="archive.empty">
+                <source>No galleries found for the selected year.</source>
+            </trans-unit>
+            <trans-unit id="retrospective.heading">
+                <source>Retrospective</source>
+            </trans-unit>
+            <trans-unit id="retrospective.empty">
+                <source>No galleries available.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

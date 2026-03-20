@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2024-01-01T00:00:00Z" product-name="gallery">
+        <header/>
+        <body>
+            <trans-unit id="tabs.general">
+                <source>General</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery">
+                <source>Gallery</source>
+                <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery.date">
+                <source>Date</source>
+                <target>Datum</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery.project_reference">
+                <source>Project Reference (optional)</source>
+                <target>Projektreferenz (optional)</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery.category">
+                <source>Category</source>
+                <target>Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallery.media">
+                <source>Images (FAL)</source>
+                <target>Bilder (FAL)</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallerycategory">
+                <source>Gallery Category</source>
+                <target>Galerie-Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallerycategory.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_gallery_domain_model_gallerycategory.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="flexform.sheet.general">
+                <source>General</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="flexform.settings.storagePid">
+                <source>Storage Page</source>
+                <target>Datenspeicher-Seite</target>
+            </trans-unit>
+            <trans-unit id="flexform.settings.itemsPerPage">
+                <source>Items per Page</source>
+                <target>Einträge pro Seite</target>
+            </trans-unit>
+            <trans-unit id="flexform.settings.enableLightbox">
+                <source>Enable Lightbox</source>
+                <target>Lightbox aktivieren</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
