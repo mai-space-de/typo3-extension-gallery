@@ -1,5 +1,6 @@
 /vendor/
 /.Build/
+/public/
 /node_modules/
 composer.lock
 .php-cs-fixer.cache
