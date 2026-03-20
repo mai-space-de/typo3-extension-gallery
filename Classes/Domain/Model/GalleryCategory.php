@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MaiSpace\Gallery\Domain\Model;
+namespace Maispace\MaiGallery\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 

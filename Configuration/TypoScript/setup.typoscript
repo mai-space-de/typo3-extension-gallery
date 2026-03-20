@@ -1,21 +1,21 @@
-plugin.tx_gallery {
+plugin.tx_maigallery {
     view {
         templateRootPaths {
             0 = EXT:mai_gallery/Resources/Private/Templates/
-            10 = {$plugin.tx_gallery.view.templateRootPath}
+            10 = {$plugin.tx_maigallery.view.templateRootPath}
         }
         partialRootPaths {
             0 = EXT:mai_gallery/Resources/Private/Partials/
-            10 = {$plugin.tx_gallery.view.partialRootPath}
+            10 = {$plugin.tx_maigallery.view.partialRootPath}
         }
         layoutRootPaths {
             0 = EXT:mai_gallery/Resources/Private/Layouts/
-            10 = {$plugin.tx_gallery.view.layoutRootPath}
+            10 = {$plugin.tx_maigallery.view.layoutRootPath}
         }
     }
 
     persistence {
-        storagePid = {$plugin.tx_gallery.persistence.storagePid}
+        storagePid = {$plugin.tx_maigallery.persistence.storagePid}
         recursive = 0
     }
 
@@ -50,6 +50,6 @@ plugin.tx_gallery {
 }
 
 # Page configuration for gallery detail pages
-[traverse(request.getQueryParams(), 'tx_gallery_gallerylist/gallery') > 0]
+[traverse(request.getQueryParams(), 'tx_maigallery_gallerylist/gallery') > 0]
     page.title.override.field = title
 [END]

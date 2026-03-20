@@ -37,9 +37,6 @@ defined("TYPO3") or die();
         "--palette--;;hidden," .
         "--palette--;;access";
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-        "*",
-        "FILE:EXT:mai_gallery/Configuration/FlexForms/GalleryList.xml",
-        "gallery_gallerylist",
-    );
+    $GLOBALS["TCA"]["tt_content"]["types"]["gallery_gallerylist"]["columnsOverrides"]["pi_flexform"]["config"]["ds"] =
+        "FILE:EXT:mai_gallery/Configuration/FlexForms/GalleryList.xml";
 })();

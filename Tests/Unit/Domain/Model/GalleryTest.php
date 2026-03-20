@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace MaiSpace\Gallery\Tests\Unit\Domain\Model;
+namespace Maispace\MaiGallery\Tests\Unit\Domain\Model;
 
-use MaiSpace\Gallery\Domain\Model\Gallery;
-use MaiSpace\Gallery\Domain\Model\GalleryCategory;
+use Maispace\MaiGallery\Domain\Model\Gallery;
+use Maispace\MaiGallery\Domain\Model\GalleryCategory;
 use PHPUnit\Framework\TestCase;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 

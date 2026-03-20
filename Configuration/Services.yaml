@@ -4,6 +4,6 @@ services:
     autoconfigure: true
     public: false
 
-  MaiSpace\Gallery\:
+  Maispace\MaiGallery\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace MaiSpace\Gallery\Controller;
+namespace Maispace\MaiGallery\Controller;
 
-use MaiSpace\Gallery\Domain\Model\Gallery;
-use MaiSpace\Gallery\Domain\Model\GalleryCategory;
-use MaiSpace\Gallery\Domain\Repository\GalleryCategoryRepository;
-use MaiSpace\Gallery\Domain\Repository\GalleryRepository;
+use Maispace\MaiGallery\Domain\Model\Gallery;
+use Maispace\MaiGallery\Domain\Model\GalleryCategory;
+use Maispace\MaiGallery\Domain\Repository\GalleryCategoryRepository;
+use Maispace\MaiGallery\Domain\Repository\GalleryRepository;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 

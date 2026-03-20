@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MaiSpace\Gallery\Domain\Repository;
+namespace Maispace\MaiGallery\Domain\Repository;
 
-use MaiSpace\Gallery\Domain\Model\GalleryCategory;
+use Maispace\MaiGallery\Domain\Model\GalleryCategory;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 

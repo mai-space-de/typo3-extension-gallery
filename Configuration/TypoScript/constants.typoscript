@@ -1,4 +1,4 @@
-plugin.tx_gallery {
+plugin.tx_maigallery {
     view {
         templateRootPath =
         partialRootPath =
