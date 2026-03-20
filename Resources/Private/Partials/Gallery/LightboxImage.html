@@ -1,0 +1,58 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:variable name="originalFile" value="{fileReference.originalFile}" />
+
+<figure class="gallery-lightbox-figure">
+
+    <f:if condition="{settings.enableLightbox} == 1">
+        <f:then>
+            <a class="glightbox gallery-lightbox-figure__link"
+               href="{f:uri.image(image: fileReference, maxWidth: settings.detailImageMaxWidth, maxHeight: settings.detailImageMaxHeight)}"
+               data-gallery="gallery-{gallery.uid}"
+               data-title="{fileReference.title}"
+               data-description="{fileReference.description}"
+               aria-label="{fileReference.alternative}">
+                <f:image image="{fileReference}"
+                         width="{settings.thumbnailWidth}c"
+                         height="{settings.thumbnailHeight}c"
+                         alt="{fileReference.alternative}"
+                         loading="lazy"
+                         class="gallery-lightbox-figure__image" />
+            </a>
+        </f:then>
+        <f:else>
+            <f:image image="{fileReference}"
+                     width="{settings.thumbnailWidth}c"
+                     height="{settings.thumbnailHeight}c"
+                     alt="{fileReference.alternative}"
+                     loading="lazy"
+                     class="gallery-lightbox-figure__image" />
+        </f:else>
+    </f:if>
+
+    <f:if condition="{fileReference.title} || {fileReference.description} || {fileReference.copyright} || {fileReference.license}">
+        <figcaption class="gallery-lightbox-figure__caption">
+            <f:if condition="{fileReference.title}">
+                <span class="gallery-lightbox-figure__title">{fileReference.title}</span>
+            </f:if>
+            <f:if condition="{fileReference.description}">
+                <span class="gallery-lightbox-figure__description">{fileReference.description}</span>
+            </f:if>
+            <f:if condition="{fileReference.copyright}">
+                <span class="gallery-lightbox-figure__photographer">
+                    <f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:show.photographer" default="Photographer" />:
+                    {fileReference.copyright}
+                </span>
+            </f:if>
+            <f:if condition="{fileReference.license}">
+                <span class="gallery-lightbox-figure__license">
+                    <f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:show.license" default="License" />:
+                    {fileReference.license}
+                </span>
+            </f:if>
+        </figcaption>
+    </f:if>
+
+</figure>
+

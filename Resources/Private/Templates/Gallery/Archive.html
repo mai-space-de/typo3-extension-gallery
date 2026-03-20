@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="content">
+<div class="tx-gallery tx-gallery--archive">
+
+    <h2 class="gallery-archive__heading">
+        <f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:archive.heading" default="Year Archive" />
+    </h2>
+
+    <f:if condition="{years -> f:count()} > 0">
+        <nav class="gallery-archive__years" aria-label="Year navigation">
+            <ul class="gallery-archive__year-list" role="list">
+                <f:for each="{years}" as="year">
+                    <li class="gallery-archive__year-item {f:if(condition: '{year} == {selectedYear}', then: 'gallery-archive__year-item--active')}">
+                        <f:link.action action="archive" arguments="{year: year}" class="gallery-archive__year-link">
+                            {year}
+                        </f:link.action>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+    </f:if>
+
+    <f:if condition="{selectedYear}">
+        <h3 class="gallery-archive__selected-year">{selectedYear}</h3>
+    </f:if>
+
+    <f:if condition="{galleries -> f:count()} > 0">
+        <f:then>
+            <ul class="gallery-grid" role="list">
+                <f:for each="{galleries}" as="gallery">
+                    <li class="gallery-grid__item">
+                        <f:render partial="Gallery/Card" arguments="{gallery: gallery, settings: settings}" />
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <p class="gallery-empty">
+                <f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:archive.empty" default="No galleries found for the selected year." />
+            </p>
+        </f:else>
+    </f:if>
+
+</div>
+</f:section>
+
+</html>

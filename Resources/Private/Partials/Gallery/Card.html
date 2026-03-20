@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<article class="gallery-card" itemscope itemtype="https://schema.org/ImageGallery">
+
+    <f:if condition="{gallery.firstMedia}">
+        <div class="gallery-card__thumbnail">
+            <f:link.action action="show" arguments="{gallery: gallery}" aria-label="{gallery.title}">
+                <f:image image="{gallery.firstMedia}"
+                         width="{settings.thumbnailWidth}c"
+                         height="{settings.thumbnailHeight}c"
+                         alt="{gallery.firstMedia.alternative}"
+                         loading="lazy"
+                         itemprop="thumbnailUrl" />
+            </f:link.action>
+        </div>
+    </f:if>
+
+    <div class="gallery-card__content">
+        <h3 class="gallery-card__title" itemprop="name">
+            <f:link.action action="show" arguments="{gallery: gallery}">{gallery.title}</f:link.action>
+        </h3>
+
+        <f:if condition="{gallery.date}">
+            <time class="gallery-card__date" datetime="{gallery.date -> f:format.date(format: 'Y-m-d')}" itemprop="dateCreated">
+                <f:format.date date="{gallery.date}" format="d. F Y" />
+            </time>
+        </f:if>
+
+        <f:if condition="{gallery.category}">
+            <span class="gallery-card__category">{gallery.category.title}</span>
+        </f:if>
+
+        <span class="gallery-card__count">
+            {gallery.media -> f:count()} <f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:list.images.count" default="images" />
+        </span>
+    </div>
+
+</article>

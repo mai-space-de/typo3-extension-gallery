@@ -1,0 +1,11 @@
+plugin.tx_gallery {
+    view {
+        templateRootPath =
+        partialRootPath =
+        layoutRootPath =
+    }
+
+    persistence {
+        storagePid =
+    }
+}
