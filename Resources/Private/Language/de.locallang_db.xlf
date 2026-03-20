@@ -7,43 +7,43 @@
                 <source>General</source>
                 <target>Allgemein</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery">
+            <trans-unit id="tx_maigallery_domain_model_gallery">
                 <source>Gallery</source>
                 <target>Galerie</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.title">
+            <trans-unit id="tx_maigallery_domain_model_gallery.title">
                 <source>Title</source>
                 <target>Titel</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.date">
+            <trans-unit id="tx_maigallery_domain_model_gallery.date">
                 <source>Date</source>
                 <target>Datum</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.project_reference">
+            <trans-unit id="tx_maigallery_domain_model_gallery.project_reference">
                 <source>Project Reference (optional)</source>
                 <target>Projektreferenz (optional)</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.category">
+            <trans-unit id="tx_maigallery_domain_model_gallery.category">
                 <source>Category</source>
                 <target>Kategorie</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.description">
+            <trans-unit id="tx_maigallery_domain_model_gallery.description">
                 <source>Description</source>
                 <target>Beschreibung</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.media">
+            <trans-unit id="tx_maigallery_domain_model_gallery.media">
                 <source>Images (FAL)</source>
                 <target>Bilder (FAL)</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallerycategory">
+            <trans-unit id="tx_maigallery_domain_model_gallerycategory">
                 <source>Gallery Category</source>
                 <target>Galerie-Kategorie</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallerycategory.title">
+            <trans-unit id="tx_maigallery_domain_model_gallerycategory.title">
                 <source>Title</source>
                 <target>Titel</target>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallerycategory.description">
+            <trans-unit id="tx_maigallery_domain_model_gallerycategory.description">
                 <source>Description</source>
                 <target>Beschreibung</target>
             </trans-unit>

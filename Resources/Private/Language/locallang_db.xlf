@@ -6,34 +6,34 @@
             <trans-unit id="tabs.general">
                 <source>General</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery">
+            <trans-unit id="tx_maigallery_domain_model_gallery">
                 <source>Gallery</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.title">
+            <trans-unit id="tx_maigallery_domain_model_gallery.title">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.date">
+            <trans-unit id="tx_maigallery_domain_model_gallery.date">
                 <source>Date</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.project_reference">
+            <trans-unit id="tx_maigallery_domain_model_gallery.project_reference">
                 <source>Project Reference (optional)</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.category">
+            <trans-unit id="tx_maigallery_domain_model_gallery.category">
                 <source>Category</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.description">
+            <trans-unit id="tx_maigallery_domain_model_gallery.description">
                 <source>Description</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallery.media">
+            <trans-unit id="tx_maigallery_domain_model_gallery.media">
                 <source>Images (FAL)</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallerycategory">
+            <trans-unit id="tx_maigallery_domain_model_gallerycategory">
                 <source>Gallery Category</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallerycategory.title">
+            <trans-unit id="tx_maigallery_domain_model_gallerycategory.title">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="tx_gallery_domain_model_gallerycategory.description">
+            <trans-unit id="tx_maigallery_domain_model_gallerycategory.description">
                 <source>Description</source>
             </trans-unit>
             <trans-unit id="flexform.sheet.general">

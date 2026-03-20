@@ -1,34 +1,46 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
-      data-namespace-typo3-fluid="true">
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:layout name="Default" />
 
-<f:layout name="Default" />
+    <f:section name="content">
+        <div class="tx-gallery tx-gallery--list">
+            <h2 class="gallery-list__heading">
+                <f:translate
+                    key="LLL:EXT:mai_gallery/Resources/Private/Language/locallang.xlf:list.heading"
+                    default="Gallery"
+                />
+            </h2>
 
-<f:section name="content">
-<div class="tx-gallery tx-gallery--list">
+            <f:render
+                partial="Gallery/Filter"
+                arguments="{years: years, categories: categories, selectedYear: selectedYear, selectedCategory: selectedCategory}"
+            />
 
-    <h2 class="gallery-list__heading">
-        <f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:list.heading" default="Gallery" />
-    </h2>
-
-    <f:render partial="Gallery/Filter" arguments="{years: years, categories: categories, selectedYear: selectedYear, selectedCategory: selectedCategory}" />
-
-    <f:if condition="{galleries -> f:count()} > 0">
-        <f:then>
-            <ul class="gallery-grid" role="list">
-                <f:for each="{galleries}" as="gallery">
-                    <li class="gallery-grid__item">
-                        <f:render partial="Gallery/Card" arguments="{gallery: gallery, settings: settings}" />
-                    </li>
-                </f:for>
-            </ul>
-        </f:then>
-        <f:else>
-            <p class="gallery-empty"><f:translate key="LLL:EXT:gallery/Resources/Private/Language/locallang.xlf:list.empty" default="No galleries found." /></p>
-        </f:else>
-    </f:if>
-
-</div>
-</f:section>
-
+            <f:if condition="{galleries -> f:count()} > 0">
+                <f:then>
+                    <ul class="gallery-grid" role="list">
+                        <f:for each="{galleries}" as="gallery">
+                            <li class="gallery-grid__item">
+                                <f:render
+                                    partial="Gallery/Card"
+                                    arguments="{gallery: gallery, settings: settings}"
+                                />
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:then>
+                <f:else>
+                    <p class="gallery-empty">
+                        <f:translate
+                            key="LLL:EXT:mai_gallery/Resources/Private/Language/locallang.xlf:list.empty"
+                            default="No galleries found."
+                        />
+                    </p>
+                </f:else>
+            </f:if>
+        </div>
+    </f:section>
 </html>

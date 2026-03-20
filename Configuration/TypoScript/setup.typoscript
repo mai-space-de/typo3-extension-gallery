@@ -1,15 +1,15 @@
 plugin.tx_gallery {
     view {
         templateRootPaths {
-            0 = EXT:gallery/Resources/Private/Templates/
+            0 = EXT:mai_gallery/Resources/Private/Templates/
             10 = {$plugin.tx_gallery.view.templateRootPath}
         }
         partialRootPaths {
-            0 = EXT:gallery/Resources/Private/Partials/
+            0 = EXT:mai_gallery/Resources/Private/Partials/
             10 = {$plugin.tx_gallery.view.partialRootPath}
         }
         layoutRootPaths {
-            0 = EXT:gallery/Resources/Private/Layouts/
+            0 = EXT:mai_gallery/Resources/Private/Layouts/
             10 = {$plugin.tx_gallery.view.layoutRootPath}
         }
     }

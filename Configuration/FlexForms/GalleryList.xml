@@ -7,13 +7,13 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:gallery/Resources/Private/Language/locallang_db.xlf:flexform.sheet.general</sheetTitle>
+                    <sheetTitle>LLL:EXT:mai_gallery/Resources/Private/Language/locallang_db.xlf:flexform.sheet.general</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
                     <settings.storagePid>
                         <TCEforms>
-                            <label>LLL:EXT:gallery/Resources/Private/Language/locallang_db.xlf:flexform.settings.storagePid</label>
+                            <label>LLL:EXT:mai_gallery/Resources/Private/Language/locallang_db.xlf:flexform.settings.storagePid</label>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
@@ -26,7 +26,7 @@
                     </settings.storagePid>
                     <settings.itemsPerPage>
                         <TCEforms>
-                            <label>LLL:EXT:gallery/Resources/Private/Language/locallang_db.xlf:flexform.settings.itemsPerPage</label>
+                            <label>LLL:EXT:mai_gallery/Resources/Private/Language/locallang_db.xlf:flexform.settings.itemsPerPage</label>
                             <config>
                                 <type>number</type>
                                 <default>12</default>
@@ -35,7 +35,7 @@
                     </settings.itemsPerPage>
                     <settings.enableLightbox>
                         <TCEforms>
-                            <label>LLL:EXT:gallery/Resources/Private/Language/locallang_db.xlf:flexform.settings.enableLightbox</label>
+                            <label>LLL:EXT:mai_gallery/Resources/Private/Language/locallang_db.xlf:flexform.settings.enableLightbox</label>
                             <config>
                                 <type>check</type>
                                 <items>
