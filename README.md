@@ -5,7 +5,7 @@
 
 Image gallery and retrospectives extension using TYPO3 FAL. Supports year archives and category filtering via TYPO3 `sys_category`, sharing the same tree as `mai_news`, `mai_faq`, and `mai_timeline`.
 
-**Requires:** TYPO3 13.4 LTS / 14.0 · PHP 8.2+
+**Requires:** TYPO3 13.4 LTS / 14.1 · PHP 8.2+
 
 ---
 
