@@ -1,19 +1,15 @@
 <?php
-
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Gallery - Bilder-Galerie & Rückblicke',
-    'description' => 'Bilder-Galerie & Rückblicke mit FAL-Integration, Jahresarchiv und Kategoriefilter.',
-    'category' => 'plugin',
-    'author' => 'Joel Maximilian Mai',
+    'title' => 'Mai Gallery',
+    'description' => 'Image gallery and retrospectives extension using TYPO3 FAL. Supports year archives and category filtering via TYPO3 `sys_category`, sharing the same tree as `mai_news`, `mai_faq`, and `mai_timeline`.',
+    'category' => 'module',
+    'author' => 'Maispace',
     'author_email' => '',
-    'author_company' => 'maispace',
     'state' => 'stable',
     'version' => '1.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.4.0-12.99.99',
-            'extbase' => '12.4.0-12.99.99',
-            'fluid' => '12.4.0-12.99.99',
+            'typo3' => '13.4.0-14.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],
