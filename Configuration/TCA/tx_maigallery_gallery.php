@@ -2,6 +2,11 @@
 
 declare(strict_types=1);
 
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\CategoryConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\FileConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\InputConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\NumberConfig;
+use Maispace\MaiBase\TableConfigurationArray\FieldConfig\TextConfig;
 use Maispace\MaiBase\TableConfigurationArray\Helper;
 use Maispace\MaiBase\TableConfigurationArray\Table;
 
@@ -16,38 +21,32 @@ return (new Table($lang('table.tx_maigallery_gallery')))
     ->addColumn(
         'title',
         $lang('tx_maigallery_gallery.title'),
-        ['type' => 'input', 'size' => 50, 'max' => 255, 'eval' => 'trim,required']
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim,required')
     )
     ->addColumn(
         'description',
         $lang('tx_maigallery_gallery.description'),
-        ['type' => 'text', 'rows' => 5, 'cols' => 50, 'eval' => 'trim']
+        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')
     )
     ->addColumn(
         'year',
         $lang('tx_maigallery_gallery.year'),
-        [
-            'type' => 'number',
-            'format' => 'integer',
-            'range' => ['lower' => 1900, 'upper' => 2100],
-        ]
+        (new NumberConfig())->setFormat('integer')->setRange(1900, 2100)
     )
     ->addColumn(
         'images',
         $lang('tx_maigallery_gallery.images'),
-        [
-            'type' => 'file',
-            'allowed' => 'common-image-types',
-            'appearance' => [
+        (new FileConfig())
+            ->setAllowed('common-image-types')
+            ->setAppearance([
                 'createNewRelationLinkTitle' => $lang('tx_maigallery_gallery.images.addFile'),
                 'enabledControls' => ['info' => true, 'dragdrop' => true, 'sort' => true, 'hide' => true, 'delete' => true],
-            ],
-        ]
+            ])
     )
     ->addColumn(
         'categories',
         $lang('tx_maigallery_gallery.categories'),
-        ['type' => 'category']
+        new CategoryConfig()
     )
     ->addTypeShowItem(
         '0',
