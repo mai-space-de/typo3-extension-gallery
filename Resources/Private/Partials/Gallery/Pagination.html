@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<nav class="mai-gallery-pagination" aria-label="{f:translate(key: 'LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:pagination.label')}">
+    <ul class="mai-gallery-pagination__list" role="list">
+        <f:if condition="{pagination.previousPageNumber}">
+            <li class="mai-gallery-pagination__item mai-gallery-pagination__item--prev">
+                <f:link.action action="list" controller="Gallery"
+                               arguments="{currentPage: pagination.previousPageNumber, year: selectedYear, category: selectedCategory}"
+                               class="mai-gallery-pagination__link"
+                               rel="prev">
+                    <f:translate key="LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:pagination.prev" />
+                </f:link.action>
+            </li>
+        </f:if>
+
+        <f:for each="{pagination.allPageNumbers}" as="pageNumber">
+            <li class="mai-gallery-pagination__item{f:if(condition: pageNumber == pagination.currentPageNumber, then: ' mai-gallery-pagination__item--current')}">
+                <f:link.action action="list" controller="Gallery"
+                               arguments="{currentPage: pageNumber, year: selectedYear, category: selectedCategory}"
+                               class="mai-gallery-pagination__link"
+                               aria-current="{f:if(condition: pageNumber == pagination.currentPageNumber, then: 'page')}">
+                    {pageNumber}
+                </f:link.action>
+            </li>
+        </f:for>
+
+        <f:if condition="{pagination.nextPageNumber}">
+            <li class="mai-gallery-pagination__item mai-gallery-pagination__item--next">
+                <f:link.action action="list" controller="Gallery"
+                               arguments="{currentPage: pagination.nextPageNumber, year: selectedYear, category: selectedCategory}"
+                               class="mai-gallery-pagination__link"
+                               rel="next">
+                    <f:translate key="LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:pagination.next" />
+                </f:link.action>
+            </li>
+        </f:if>
+    </ul>
+</nav>
+</html>

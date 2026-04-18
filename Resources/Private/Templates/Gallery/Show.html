@@ -1,0 +1,48 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <mai:asset.css identifier="mai-gallery" src="EXT:mai_gallery/Resources/Public/Css/gallery.css" />
+
+    <div class="mai-gallery-detail">
+        <f:if condition="{gallery}">
+            <f:then>
+                <article class="mai-gallery-detail__article" aria-labelledby="gallery-title-{gallery.uid}">
+                    <header class="mai-gallery-detail__header">
+                        <h1 id="gallery-title-{gallery.uid}" class="mai-gallery-detail__title">
+                            {gallery.title}
+                        </h1>
+                        <f:if condition="{gallery.year}">
+                            <p class="mai-gallery-detail__year">
+                                <time datetime="{gallery.year}">{gallery.year}</time>
+                            </p>
+                        </f:if>
+                    </header>
+
+                    <f:if condition="{gallery.description}">
+                        <div class="mai-gallery-detail__description">
+                            <f:format.html>{gallery.description}</f:format.html>
+                        </div>
+                    </f:if>
+
+                    <f:if condition="{gallery.images}">
+                        <ul class="mai-gallery-detail__images" role="list" data-lightbox-gallery="gallery-{gallery.uid}">
+                            <f:for each="{gallery.images}" as="image">
+                                <li class="mai-gallery-detail__image-item">
+                                    <f:render partial="Gallery/Image" arguments="{image: image, settings: settings}" />
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </article>
+
+                <nav class="mai-gallery-detail__back" aria-label="{f:translate(key: 'LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:detail.nav.label')}">
+                    <f:if condition="{settings.listPid}">
+                        <f:link.page pageUid="{settings.listPid}" class="mai-gallery-detail__back-link">
+                            <f:translate key="LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:detail.back" />
+                        </f:link.page>
+                    </f:if>
+                </nav>
+            </f:then>
+        </f:if>
+    </div>
+</f:section>

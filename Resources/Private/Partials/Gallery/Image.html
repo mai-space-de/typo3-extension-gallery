@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:mai="http://typo3.org/ns/Maispace/MaiAssets/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="mai-gallery-image" data-lightbox-item>
+    <mai:image.picture image="{image}"
+                       breakpoints="{
+                           0: {width: 400, height: 300, cropVariant: 'default'},
+                           1: {width: 800, height: 600, cropVariant: 'default'}
+                       }"
+                       sizes="(min-width: 1024px) 800px, 100vw"
+                       alt="{image.alternative}"
+                       class="mai-gallery-image__img" />
+    <f:if condition="{image.title}">
+        <figcaption class="mai-gallery-image__caption">{image.title}</figcaption>
+    </f:if>
+</div>
+</html>

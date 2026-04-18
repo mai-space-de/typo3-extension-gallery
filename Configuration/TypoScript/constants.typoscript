@@ -1,0 +1,13 @@
+plugin.tx_maigallery {
+    settings {
+        itemsPerPage = 12
+        detailPid =
+        listPid =
+        image {
+            maxWidth = 800
+            maxHeight = 600
+            thumbnailWidth = 400
+            thumbnailHeight = 300
+        }
+    }
+}

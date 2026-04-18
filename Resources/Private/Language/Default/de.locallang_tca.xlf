@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages"
+          date="2025-01-01T00:00:00Z" product-name="mai_gallery">
+        <header/>
+        <body>
+            <trans-unit id="table.tx_maigallery_gallery">
+                <source>Gallery</source>
+                <target>Galerie</target>
+            </trans-unit>
+
+            <trans-unit id="tx_maigallery_gallery.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_maigallery_gallery.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_maigallery_gallery.year">
+                <source>Year</source>
+                <target>Jahr</target>
+            </trans-unit>
+            <trans-unit id="tx_maigallery_gallery.images">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="tx_maigallery_gallery.images.addFile">
+                <source>Add image</source>
+                <target>Bild hinzufügen</target>
+            </trans-unit>
+            <trans-unit id="tx_maigallery_gallery.categories">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+
+            <trans-unit id="tab.language">
+                <source>Language</source>
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="tab.access">
+                <source>Access</source>
+                <target>Zugang</target>
+            </trans-unit>
+            <trans-unit id="tab.relations">
+                <source>Relations</source>
+                <target>Relationen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

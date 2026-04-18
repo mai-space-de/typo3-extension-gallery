@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<nav class="mai-gallery-year-filter" aria-label="{f:translate(key: 'LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:yearFilter.label')}">
+    <ul class="mai-gallery-year-filter__list" role="list">
+        <li class="mai-gallery-year-filter__item">
+            <f:link.action action="list" controller="Gallery"
+                           arguments="{year: 0, category: selectedCategory}"
+                           class="mai-gallery-year-filter__link{f:if(condition: selectedYear == 0, then: ' mai-gallery-year-filter__link--active')}"
+                           aria-current="{f:if(condition: selectedYear == 0, then: 'true')}">
+                <f:translate key="LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:yearFilter.all" />
+            </f:link.action>
+        </li>
+        <f:for each="{years}" as="year">
+            <li class="mai-gallery-year-filter__item">
+                <f:link.action action="list" controller="Gallery"
+                               arguments="{year: year, category: selectedCategory}"
+                               class="mai-gallery-year-filter__link{f:if(condition: selectedYear == year, then: ' mai-gallery-year-filter__link--active')}"
+                               aria-current="{f:if(condition: selectedYear == year, then: 'true')}">
+                    {year}
+                </f:link.action>
+            </li>
+        </f:for>
+    </ul>
+</nav>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages"
+          date="2025-01-01T00:00:00Z" product-name="mai_gallery">
+        <header/>
+        <body>
+            <trans-unit id="plugin.gallery.title">
+                <source>Gallery</source>
+            </trans-unit>
+            <trans-unit id="plugin.gallery.description">
+                <source>Displays image galleries with year archive and category filtering.</source>
+            </trans-unit>
+
+            <trans-unit id="list.empty">
+                <source>No galleries found.</source>
+            </trans-unit>
+
+            <trans-unit id="card.imageCount">
+                <source>%1$d photos</source>
+            </trans-unit>
+
+            <trans-unit id="yearFilter.label">
+                <source>Filter by year</source>
+            </trans-unit>
+            <trans-unit id="yearFilter.all">
+                <source>All years</source>
+            </trans-unit>
+
+            <trans-unit id="pagination.label">
+                <source>Pagination</source>
+            </trans-unit>
+            <trans-unit id="pagination.prev">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="pagination.next">
+                <source>Next</source>
+            </trans-unit>
+
+            <trans-unit id="detail.back">
+                <source>Back to gallery overview</source>
+            </trans-unit>
+            <trans-unit id="detail.nav.label">
+                <source>Gallery navigation</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

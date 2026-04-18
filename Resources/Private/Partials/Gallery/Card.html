@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:mai="http://typo3.org/ns/Maispace/MaiAssets/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<article class="mai-gallery-card" aria-label="{gallery.title}">
+    <f:link.action action="show" controller="Gallery" arguments="{uid: gallery.uid}"
+                   pageUid="{settings.detailPid}" class="mai-gallery-card__link">
+        <f:if condition="{gallery.coverImage}">
+            <div class="mai-gallery-card__cover" aria-hidden="true">
+                <mai:image.picture image="{gallery.coverImage}"
+                                   breakpoints="{0: {width: 400, height: 300, cropVariant: 'default'}}"
+                                   sizes="(min-width: 1024px) 400px, 100vw"
+                                   alt="{gallery.title}"
+                                   class="mai-gallery-card__img" />
+            </div>
+        </f:if>
+
+        <div class="mai-gallery-card__body">
+            <h2 class="mai-gallery-card__title">{gallery.title}</h2>
+
+            <f:if condition="{gallery.year}">
+                <p class="mai-gallery-card__year">
+                    <time datetime="{gallery.year}">{gallery.year}</time>
+                </p>
+            </f:if>
+
+            <f:if condition="{gallery.images}">
+                <p class="mai-gallery-card__count">
+                    <f:translate key="LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:card.imageCount"
+                                 arguments="{0: gallery.images.count()}" />
+                </p>
+            </f:if>
+        </div>
+    </f:link.action>
+</article>
+</html>

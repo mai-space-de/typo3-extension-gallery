@@ -1,0 +1,32 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <mai:asset.css identifier="mai-gallery" src="EXT:mai_gallery/Resources/Public/Css/gallery.css" />
+
+    <div class="mai-gallery-list">
+        <f:if condition="{years}">
+            <f:render partial="Gallery/YearFilter" arguments="{_all}" />
+        </f:if>
+
+        <f:if condition="{galleries}">
+            <f:then>
+                <ul class="mai-gallery-list__grid" role="list">
+                    <f:for each="{paginator.paginatedItems}" as="gallery">
+                        <li class="mai-gallery-list__item">
+                            <f:render partial="Gallery/Card" arguments="{gallery: gallery, settings: settings}" />
+                        </li>
+                    </f:for>
+                </ul>
+
+                <f:if condition="{pagination.lastPageNumber} > 1">
+                    <f:render partial="Gallery/Pagination" arguments="{_all}" />
+                </f:if>
+            </f:then>
+            <f:else>
+                <p class="mai-gallery-list__empty">
+                    <f:translate key="LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:list.empty" />
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>

@@ -51,6 +51,13 @@
         "test": "phpunit --configuration phpunit.xml.dist",
         "test:unit": "phpunit --configuration phpunit.xml.dist --testsuite Unit"
     },
+    "require": {
+        "php": "^8.2",
+        "typo3/cms-core": "^13.4 || ^14.0",
+        "typo3/cms-extbase": "^13.4 || ^14.0",
+        "typo3/cms-fluid": "^13.4 || ^14.0",
+        "maispace/mai-base": "@dev"
+    },
     "config": {
         "allow-plugins": {
             "typo3/cms-composer-installers": true,
