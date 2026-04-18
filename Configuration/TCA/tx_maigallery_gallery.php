@@ -15,13 +15,12 @@ $lang = Helper::localLangHelperFactory('mai_gallery', 'Default/locallang_tca.xlf
 return (new Table($lang('table.tx_maigallery_gallery')))
     ->setDefaultConfig()
     ->setLabel('title')
-    ->setSearchFields('title, description')
     ->setIconFile('EXT:mai_gallery/Resources/Public/Icons/tx_maigallery_gallery.svg')
     ->setDefaultSorting('ORDER BY year DESC, crdate DESC')
     ->addColumn(
         'title',
         $lang('tx_maigallery_gallery.title'),
-        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim,required')
+        (new InputConfig())->setSize(50)->setMax(255)->setEval('trim')->setRequired()
     )
     ->addColumn(
         'description',
