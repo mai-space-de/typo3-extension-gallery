@@ -20,7 +20,7 @@ class GalleryRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('year', $year)
+            $query->equals('year', $year),
         );
         return $query->execute();
     }
@@ -29,7 +29,7 @@ class GalleryRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->contains('categories', $categoryUid)
+            $query->contains('categories', $categoryUid),
         );
         return $query->execute();
     }

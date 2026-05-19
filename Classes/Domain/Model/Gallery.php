@@ -6,7 +6,6 @@ namespace Maispace\MaiGallery\Domain\Model;
 
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class Gallery extends AbstractEntity
@@ -35,13 +34,8 @@ class Gallery extends AbstractEntity
 
     public function initializeObject(): void
     {
-        $this->images = $this->images instanceof LazyLoadingProxy
-            ? $this->images->_loadRealInstance()
-            : ($this->images ?? new ObjectStorage());
-
-        $this->categories = $this->categories instanceof LazyLoadingProxy
-            ? $this->categories->_loadRealInstance()
-            : ($this->categories ?? new ObjectStorage());
+        $this->images = new ObjectStorage();
+        $this->categories = new ObjectStorage();
     }
 
     public function getTitle(): string
