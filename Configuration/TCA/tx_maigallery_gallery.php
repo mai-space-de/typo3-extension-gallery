@@ -25,7 +25,7 @@ return (new Table($lang('table.tx_maigallery_gallery')))
     ->addColumn(
         'description',
         $lang('tx_maigallery_gallery.description'),
-        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')
+        (new TextConfig())->setRows(5)->setCols(50)->setEval('trim')->enableRte()->setRichtextConfiguration('default')
     )
     ->addColumn(
         'year',
