@@ -38,6 +38,7 @@ return (new Table($lang('table.tx_maigallery_gallery')))
         (new FileConfig())
             ->setAllowed('common-image-types')
             ->setAppearance([
+                'headerThumbnail' => ['width' => 45, 'height' => 45],
                 'createNewRelationLinkTitle' => $lang('tx_maigallery_gallery.images.addFile'),
                 'enabledControls' => ['info' => true, 'dragdrop' => true, 'sort' => true, 'hide' => true, 'delete' => true],
             ])
