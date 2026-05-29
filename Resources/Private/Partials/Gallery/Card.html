@@ -8,7 +8,7 @@
         <f:if condition="{gallery.coverImage}">
             <div class="mai-gallery-card__cover" aria-hidden="true">
                 <mai:image.picture image="{gallery.coverImage}"
-                                   breakpoints="{0: {width: 400, height: 300, cropVariant: 'default'}}"
+                                   width="400"
                                    sizes="(min-width: 1024px) 400px, 100vw"
                                    alt="{gallery.title}"
                                    class="mai-gallery-card__img" />
