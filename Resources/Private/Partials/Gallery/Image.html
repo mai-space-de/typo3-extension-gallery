@@ -4,11 +4,8 @@
 
 <div class="mai-gallery-image" data-lightbox-item>
     <mai:image.picture image="{image}"
-                       breakpoints="{
-                           0: {width: 400, height: 300, cropVariant: 'default'},
-                           1: {width: 800, height: 600, cropVariant: 'default'}
-                       }"
                        sizes="(min-width: 1024px) 800px, 100vw"
+                       width="800"
                        alt="{image.alternative}"
                        class="mai-gallery-image__img" />
     <f:if condition="{image.title}">
