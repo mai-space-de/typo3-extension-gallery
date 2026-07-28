@@ -9,7 +9,7 @@ ExtensionUtility::registerPlugin(
     'Gallery',
     'LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:plugin.gallery.title',
     'mai-content',
-    'plugins',
+    'maispace_plugins_lists',
     'LLL:EXT:mai_gallery/Resources/Private/Language/Default/locallang.xlf:plugin.gallery.description',
 );
 
