@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Maispace\MaiGallery\Indexer;
 
-use ApacheSolrForTypo3\Solr\System\Solr\Document\Document;
 use Maispace\MaiGallery\Domain\Model\Gallery;
 use Maispace\MaiSearch\Domain\Dto\SearchResult;
 use Maispace\MaiSearch\Domain\Model\IndexingContext;
@@ -61,9 +60,7 @@ class GalleryIndexer extends AbstractIndexer implements SearchResultFormatterInt
             return;
         }
 
-        $connection = $this->connectionFactory->getConnection();
-        $connection->deleteByQuery('id:' . $this->getType() . '-' . $uid);
-        $connection->commit(false, false);
+        $this->removeDocument($uid);
     }
 
     protected function buildContent(object $record): string
