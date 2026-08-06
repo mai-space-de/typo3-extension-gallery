@@ -6,34 +6,46 @@ namespace Maispace\MaiGallery\Controller;
 
 use Maispace\MaiBase\Controller\AbstractActionController;
 use Maispace\MaiBase\Controller\Traits\DetailActionTrait;
-use Maispace\MaiBase\Controller\Traits\PaginationTrait;
 use Maispace\MaiGallery\Domain\Model\Gallery;
 use Maispace\MaiGallery\Domain\Repository\GalleryRepository;
 use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Core\Pagination\QueryBuilderPaginator;
+use TYPO3\CMS\Core\Pagination\SimplePagination;
 
 class GalleryController extends AbstractActionController
 {
-    use PaginationTrait;
     use DetailActionTrait;
 
     public function __construct(
         private readonly GalleryRepository $galleryRepository,
     ) {}
 
-    public function listAction(int $year = 0, int $category = 0): ResponseInterface
+    public function listAction(int $year = 0, int $category = 0, int $page = 1): ResponseInterface
     {
-        $galleries = $this->galleryRepository->findFilteredAndSorted($category, $year);
+        $settings = $this->getSettings();
+        $itemsPerPage = (int) ($settings['limit'] ?? 10);
+
+        $queryBuilder = $this->galleryRepository->createQueryBuilderForPagination($category, $year);
+
+        $paginator = new QueryBuilderPaginator(
+            $queryBuilder,
+            $page,
+            $itemsPerPage
+        );
+
+        $pagination = new SimplePagination($paginator);
+
         $years = $this->galleryRepository->findDistinctYears();
-        $pagination = $this->paginateQueryResult($galleries);
 
         $this->view->assignMultiple([
-            'galleries' => $galleries,
+            'galleries' => $paginator->getPaginatedItems(),
             'years' => $years,
             'selectedYear' => $year,
             'selectedCategory' => $category,
-            'pagination' => $pagination['pagination'],
-            'paginator' => $pagination['paginator'],
-            'settings' => $this->getSettings(),
+            'pagination' => $pagination,
+            'paginator' => $paginator,
+            'currentPage' => $page,
+            'settings' => $settings,
             'contentObject' => $this->getContentObjectData(),
         ]);
 

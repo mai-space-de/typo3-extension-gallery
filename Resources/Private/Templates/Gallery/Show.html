@@ -23,7 +23,7 @@
 
                     <f:if condition="{gallery.description}">
                         <div class="mai-gallery-detail__description">
-                            <f:format.html>{gallery.description}</f:format.html>
+                            <f:render.text record="{gallery}" field="description" />
                         </div>
                     </f:if>
 
