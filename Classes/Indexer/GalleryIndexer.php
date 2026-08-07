@@ -24,6 +24,11 @@ class GalleryIndexer extends AbstractIndexer implements SearchResultFormatterInt
         return 'gallery';
     }
 
+    public function getTableName(): string
+    {
+        return self::TABLE_NAME;
+    }
+
     public function supports(string $table): bool
     {
         return $table === self::TABLE_NAME;
