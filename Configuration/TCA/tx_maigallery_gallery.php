@@ -15,7 +15,8 @@ $lang = Helper::localLangHelperFactory('mai_gallery', 'Default/locallang_tca.xlf
 return (new Table($lang('table.tx_maigallery_gallery')))
     ->setDefaultConfig()
     ->setLabel('title')
-    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/all-icons/image-picture-gallery--pages-filter-picture-pagination-image--Streamline-Core.svg')
+
     ->setDefaultSorting('ORDER BY year DESC, crdate DESC')
     ->addColumn(
         'title',
