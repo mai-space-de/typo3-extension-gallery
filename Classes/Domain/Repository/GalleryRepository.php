@@ -87,7 +87,7 @@ class GalleryRepository extends Repository
         if ($year > 0) {
             $queryBuilder
                 ->andWhere(
-                    $queryBuilder->expr()->eq('year', $queryBuilder->createNamedParameter($year, \PDO::PARAM_INT))
+                    $queryBuilder->expr()->eq('year', $queryBuilder->createNamedParameter($year, \PDO::PARAM_INT)),
                 );
         }
 
@@ -97,16 +97,16 @@ class GalleryRepository extends Repository
                     'tx_maigallery_gallery',
                     'sys_category_record_mm',
                     'mm',
-                    $queryBuilder->expr()->eq('mm.uid_foreign', $queryBuilder->quoteIdentifier('tx_maigallery_gallery.uid'))
+                    $queryBuilder->expr()->eq('mm.uid_foreign', $queryBuilder->quoteIdentifier('tx_maigallery_gallery.uid')),
                 )
                 ->andWhere(
-                    $queryBuilder->expr()->eq('mm.uid_local', $queryBuilder->createNamedParameter($categoryUid, \PDO::PARAM_INT))
+                    $queryBuilder->expr()->eq('mm.uid_local', $queryBuilder->createNamedParameter($categoryUid, \PDO::PARAM_INT)),
                 )
                 ->andWhere(
-                    $queryBuilder->expr()->eq('mm.tablenames', $queryBuilder->createNamedParameter('tx_maigallery_gallery'))
+                    $queryBuilder->expr()->eq('mm.tablenames', $queryBuilder->createNamedParameter('tx_maigallery_gallery')),
                 )
                 ->andWhere(
-                    $queryBuilder->expr()->eq('mm.fieldname', $queryBuilder->createNamedParameter('categories'))
+                    $queryBuilder->expr()->eq('mm.fieldname', $queryBuilder->createNamedParameter('categories')),
                 );
         }
 

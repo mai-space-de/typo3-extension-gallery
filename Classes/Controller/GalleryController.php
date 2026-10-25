@@ -30,7 +30,7 @@ class GalleryController extends AbstractActionController
         $paginator = new QueryBuilderPaginator(
             $queryBuilder,
             $page,
-            $itemsPerPage
+            $itemsPerPage,
         );
 
         $pagination = new SimplePagination($paginator);
